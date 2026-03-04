@@ -4,17 +4,30 @@
  */
 package gestortareas;
 
+import java.util.Scanner;
+
 /**
+ * Clase principal que gestiona el menú de usuario.
  *
- * @author guill
+ * @author Alumno A y Alumno B
  */
 public class GestorTareas {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        GestorTarea gestor = new GestorTarea();
+
+        // Menú con la opción 1 programada
+        System.out.println("1. Añadir tarea");
+        System.out.print("Seleccione opción: ");
+        int opcion = sc.nextInt();
+        sc.nextLine(); // Limpiar buffer
+
+        if (opcion == 1) {
+            System.out.print("Escribe la descripción de la tarea: ");
+            String desc = sc.nextLine();
+            gestor.añadirTarea(desc);
+        }
     }
-    
+
 }

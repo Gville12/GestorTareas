@@ -20,6 +20,16 @@ public class GestorTarea {
     }
 
     /**
+     * Añade una tarea a la lista (Implementado por Guillermo).
+     * @param descripcion Descripción de la nueva tarea.
+     */
+    public void añadirTarea(String descripcion) {
+        Tarea nuevaTarea = new Tarea(descripcion);
+        listaTareas.add(nuevaTarea);
+        System.out.println("Tarea añadida con éxito.");
+    }
+    
+    /**
      * * Muestra todas las tareas por consola (Implementado por Judith).
      */
     public void mostrarTareas() {
